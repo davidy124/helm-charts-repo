@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: giphy-service
+spec:
+  clusterIP: None  # Headless service
+  selector:
+    app: {{ .Release.Name }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}

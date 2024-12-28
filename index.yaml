@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  giphy-app:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2024-12-28T04:14:27.081162182Z"
+    description: A Helm chart for Giphy React Application
+    digest: 02d8c0c9d57ac977118f49d6c82b7372a26f36f140069f461d7be42dc688dc31
+    name: giphy-app
+    type: application
+    urls:
+    - https://github.com/davidy124/helm-charts-repo/releases/download/giphy-app-0.1.0/giphy-app-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-12-28T04:14:27.081167762Z"

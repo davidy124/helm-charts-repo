@@ -6,8 +6,8 @@ replicaCount: 2
 
 image:
   repository: davidy/giphy-app
-  tag: 1.0-arm
-  pullPolicy: IfNotPresent
+  tag: 1.0.2-arm
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""
@@ -28,7 +28,7 @@ podAnnotations: {}
 podLabels: {}
 
 podSecurityContext: {}
-  # fsGroup: 2000
+# fsGroup: 2000
 
 securityContext: {}
   # capabilities:
@@ -36,7 +36,7 @@ securityContext: {}
   #   - ALL
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
-  # runAsUser: 1000
+# runAsUser: 1000
 
 service:
   type: ClusterIP
@@ -60,7 +60,7 @@ resources: {}
   #   memory: 128Mi
   # requests:
   #   cpu: 100m
-  #   memory: 128Mi
+#   memory: 128Mi
 
 livenessProbe:
   httpGet:
@@ -96,3 +96,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+config:
+  appVersion: "3.0.1"
+  giphyApiKey: "D5alg8VJszdaN8CX5vZ4s5Bz98swD0Ca"

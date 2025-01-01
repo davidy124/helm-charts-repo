@@ -16,5 +16,10 @@ spec:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: APP_VERSION
+              value: {{ .Values.config.appVersion | quote }}
+            - name: GIPHY_API_KEY
+              value: {{ .Values.config.giphyApiKey | quote }}
           ports:
             - containerPort: {{ .Values.service.targetPort }}

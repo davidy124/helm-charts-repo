@@ -19,7 +19,9 @@ spec:
           env:
             - name: APP_VERSION
               value: {{ .Values.config.appVersion | quote }}
+            {{- if .Values.config.giphyApiKey }}
             - name: GIPHY_API_KEY
               value: {{ .Values.config.giphyApiKey | quote }}
+            {{- end }}
           ports:
             - containerPort: {{ .Values.service.targetPort }}

@@ -98,5 +98,6 @@ tolerations: []
 affinity: {}
 
 config:
-  appVersion: "3.0.1"
-  giphyApiKey: "D5alg8VJszdaN8CX5vZ4s5Bz98swD0Ca"
+  appVersion: "3.0.2"
+  # giphyApiKey should be provided during installation or will use default value
+  giphyApiKey: ""
